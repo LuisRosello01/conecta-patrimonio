@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,24 +51,31 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video informativo">
-                <h2 class="section-title">Video sobre la Iglesia</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre la Iglesia de Nuestra Señora de Sales con subtítulos">
-                        <source src="videos/iglesia-sales.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/iglesia-sales-es.vtt" srclang="es" label="Español" default>
-                        <p>Tu navegador no soporta video. <a href="videos/iglesia-sales.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra la Iglesia de Nuestra Señora de Sales y sus tradiciones. Tiene subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre la Iglesia de Nuestra Señora de Sales">
+                        <source src="audios/Iglesia de Sales.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Iglesia de Sales.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>Ubicada en la histórica Placeta del Convent, esta iglesia forma parte del antiguo convento de los Mínimos.</p>
+                        <p>Su construcción data de los siglos XVII y XVIII, y se caracteriza por su estilo neoclásico y su cúpula de cerámica azul vidriada, típica de la arquitectura religiosa valenciana.</p>
+                        <p>En su interior alberga imágenes de gran valor y pinturas que siguen la influencia del taller de Juan de Juanes.</p>
+                        <p>Es un espacio cargado de tradición y devoción popular, especialmente durante las festividades marianas.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre la Virgen de Sales</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre la Iglesia de Nuestra Señora de Sales">
-                        <source src="audio/iglesia-sales.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/iglesia-sales.mp3">Descargar audio</a></p>
+                        <source src="audios/Iglesia de Sales.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Iglesia de Sales.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha sobre la devoción a la Virgen de Sales en Sueca.</p>
                 </div>

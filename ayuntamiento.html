@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,24 +51,32 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video informativo">
-                <h2 class="section-title">Video sobre el Ayuntamiento</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre el Ayuntamiento de Sueca con subtítulos">
-                        <source src="videos/ayuntamiento.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/ayuntamiento-es.vtt" srclang="es" label="Español" default>
-                        <p>Tu navegador no soporta video. <a href="videos/ayuntamiento.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra el Ayuntamiento de Sueca y su importancia. Tiene subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Ayuntamiento de Sueca">
+                        <source src="audios/Ayuntamiento.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Ayuntamiento.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>El edificio del Ayuntamiento de Sueca, construido en el año 1784, es uno de los ejemplos más representativos de arquitectura civil neoclásica en la comarca.</p>
+                        <p>Su fachada, sobria y simétrica, refleja el equilibrio y la proporción propios del estilo ilustrado.</p>
+                        <p>En el interior destaca una amplia escalera de mármol blanco que conduce a la planta noble, donde se conservan salones con decoración institucional y una elegante cúpula que corona el vestíbulo central.</p>
+                        <p>Este edificio ha sido, desde su construcción, el centro administrativo de la ciudad y ha presenciado importantes acontecimientos históricos, tanto políticos como sociales.</p>
+                        <p>A lo largo del tiempo ha sido restaurado respetando su estructura original, y hoy sigue funcionando como sede del gobierno municipal, manteniendo su relevancia como símbolo de la vida cívica de Sueca.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre el Ayuntamiento</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre el Ayuntamiento de Sueca">
-                        <source src="audio/ayuntamiento.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/ayuntamiento.mp3">Descargar audio</a></p>
+                        <source src="audios/Ayuntamiento.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Ayuntamiento.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha sobre la función del Ayuntamiento en la vida de Sueca.</p>
                 </div>

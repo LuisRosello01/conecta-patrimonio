@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,25 +51,32 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video con audiodescripción">
-                <h2 class="section-title">Video con Audiodescripción</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre el Museo de Chocolate Comes con audiodescripción y subtítulos">
-                        <source src="videos/museo-chocolate.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/museo-chocolate-es.vtt" srclang="es" label="Español" default>
-                        <track kind="descriptions" src="subtitles/museo-chocolate-audiodesc.vtt" srclang="es" label="Audiodescripción">
-                        <p>Tu navegador no soporta video. <a href="videos/museo-chocolate.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra cómo se hace el chocolate en el museo. Incluye audiodescripción para personas con discapacidad visual y subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Museo de Chocolate Comes">
+                        <source src="audios/Museo de Chocolate.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Museo de Chocolate.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>Ubicado en una antigua fábrica de chocolate en pleno centro de Sueca, el Museo del Chocolate Comes ofrece un recorrido fascinante por la historia y elaboración artesanal del chocolate.</p>
+                        <p>Fundada en 1870 por la familia Comes, esta empresa ha mantenido la tradición chocolatera durante generaciones, y hoy abre sus puertas al público a través de visitas guiadas y demostraciones en vivo.</p>
+                        <p>El museo conserva maquinaria original del siglo XIX y principios del XX, incluyendo tostadoras, molinos y moldes de hierro fundido, que muestran cómo se transformaba el grano de cacao en tabletas y bombones.</p>
+                        <p>También cuenta con paneles informativos, envases antiguos y una pequeña tienda donde degustar productos elaborados in situ.</p>
+                        <p>Es una visita deliciosa que combina patrimonio industrial, tradición familiar y cultura gastronómica valenciana.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre el Chocolate</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre el Museo de Chocolate Comes">
-                        <source src="audio/museo-chocolate.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/museo-chocolate.mp3">Descargar audio</a></p>
+                        <source src="audios/Museo de Chocolate.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Museo de Chocolate.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha sobre la historia del chocolate en Sueca y la familia Comes.</p>
                 </div>

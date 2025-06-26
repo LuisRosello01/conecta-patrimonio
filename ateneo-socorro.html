@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,24 +51,31 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video informativo">
-                <h2 class="section-title">Video sobre el Ateneo</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre el Ateneo del Socorro con subtítulos">
-                        <source src="videos/ateneo-socorro.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/ateneo-socorro-es.vtt" srclang="es" label="Español" default>
-                        <p>Tu navegador no soporta video. <a href="videos/ateneo-socorro.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra el Ateneo del Socorro y sus actividades culturales. Tiene subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Ateneo del Socorro">
+                        <source src="audios/Ateneo.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Ateneo.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>Construido entre 1927 y 1929 por el arquitecto Juan Guardiola, este edificio es una joya del modernismo valenciano tardío con fuertes influencias del art déco.</p>
+                        <p>Su fachada combina formas geométricas, líneas estilizadas y detalles decorativos que lo convierten en un icono arquitectónico.</p>
+                        <p>En su interior albergaba un salón de actos, aulas y espacios de reunión para actividades culturales y mutualistas.</p>
+                        <p>Es testimonio de una época de crecimiento social y artístico en Sueca.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre el Ateneo</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre el Ateneo del Socorro">
-                        <source src="audio/ateneo-socorro.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/ateneo-socorro.mp3">Descargar audio</a></p>
+                        <source src="audios/Ateneo.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Ateneo.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha sobre la historia y actividades del Ateneo del Socorro.</p>
                 </div>

@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,24 +51,32 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video informativo">
-                <h2 class="section-title">Video sobre el Mercado</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre el Mercado Municipal con subtítulos">
-                        <source src="videos/mercado-municipal.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/mercado-municipal-es.vtt" srclang="es" label="Español" default>
-                        <p>Tu navegador no soporta video. <a href="videos/mercado-municipal.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra el ambiente del Mercado Municipal y sus productos. Tiene subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Mercado Municipal">
+                        <source src="audios/Mercado.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Mercado.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>Situado en pleno centro urbano, el Mercado Municipal de Sueca es uno de los espacios más vivos y auténticos de la ciudad.</p>
+                        <p>El edificio original, de principios del siglo XX, fue remodelado con un diseño funcional que respeta elementos arquitectónicos tradicionales, como la estructura metálica y los grandes ventanales para la ventilación natural.</p>
+                        <p>En su interior, decenas de puestos ofrecen productos frescos de la huerta valenciana, arroz de la Albufera, pescado de lonja, embutidos, dulces típicos y otros productos locales de alta calidad.</p>
+                        <p>Más allá de su función comercial, el mercado es también un punto de encuentro social y cultural, donde la comunidad mantiene vivas las costumbres gastronómicas de la Ribera.</p>
+                        <p>Es un lugar ideal para conocer de cerca la identidad culinaria de Sueca y su entorno.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre el Mercado</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre el Mercado Municipal">
-                        <source src="audio/mercado-municipal.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/mercado-municipal.mp3">Descargar audio</a></p>
+                        <source src="audios/Mercado.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Mercado.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha sobre la tradición comercial del Mercado Municipal de Sueca.</p>
                 </div>

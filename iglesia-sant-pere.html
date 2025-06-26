@@ -31,9 +31,9 @@
                     <span class="option-icon" aria-hidden="true">📖</span>
                     Lectura Fácil
                 </button>
-                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
-                    <span class="option-icon" aria-hidden="true">🎥</span>
-                    Video con Audiodescripción
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">�</span>
+                    Audiodescripción
                 </button>
             </div>
         </div>
@@ -51,25 +51,31 @@
                 </div>
             </section>
             
-            <section class="media-section" aria-label="Video con audiodescripción">
-                <h2 class="section-title">Video con Audiodescripción</h2>
-                <div class="video-container">
-                    <video controls aria-label="Video sobre la Iglesia de Sant Pere con audiodescripción y subtítulos">
-                        <source src="videos/iglesia-sant-pere.mp4" type="video/mp4">
-                        <track kind="subtitles" src="subtitles/iglesia-sant-pere-es.vtt" srclang="es" label="Español" default>
-                        <track kind="descriptions" src="subtitles/iglesia-sant-pere-audiodesc.vtt" srclang="es" label="Audiodescripción">
-                        <p>Tu navegador no soporta video. <a href="videos/iglesia-sant-pere.mp4">Descargar video</a></p>
-                    </video>
-                    <p class="media-description">Este video muestra la Iglesia de Sant Pere por dentro y por fuera. Incluye audiodescripción para personas con discapacidad visual y subtítulos en español.</p>
+            <section class="media-section" aria-label="Audio con transcripción">
+                <h2 class="section-title">Audiodescripción</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre la Iglesia de Sant Pere">
+                        <source src="audios/Iglesia Sant Pere.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Iglesia Sant Pere.mp3">Descargar audio</a></p>
+                    </audio>
+                </div>
+                <div class="transcription-section">
+                    <h3 class="transcription-title">Transcripción del audio:</h3>
+                    <div class="transcription-content">
+                        <p>Esta iglesia es uno de los edificios religiosos más importantes de Sueca y se sitúa en pleno centro histórico.</p>
+                        <p>Fue construida sobre una antigua iglesia románica y ha sido ampliada en distintas etapas, incorporando estilos gótico, renacentista y barroco.</p>
+                        <p>Su fachada sobria esconde un interior con tres naves separadas por columnas toscanas, una cúpula central de tejas azules y un campanario de cinco cuerpos que domina el perfil urbano de la ciudad.</p>
+                        <p>Es un punto de referencia espiritual y cultural en la comarca.</p>
+                    </div>
                 </div>
             </section>
             
-            <section class="audio-section" aria-label="Audio informativo">
+            <section class="audio-section" aria-label="Audio informativo adicional">
                 <h2 class="section-title">Audio sobre la Iglesia</h2>
                 <div class="audio-container">
                     <audio controls aria-label="Audio sobre la Iglesia de Sant Pere">
-                        <source src="audio/iglesia-sant-pere.mp3" type="audio/mpeg">
-                        <p>Tu navegador no soporta audio. <a href="audio/iglesia-sant-pere.mp3">Descargar audio</a></p>
+                        <source src="audios/Iglesia Sant Pere.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audios/Iglesia Sant Pere.mp3">Descargar audio</a></p>
                     </audio>
                     <p class="media-description">Escucha información sobre la historia de la Iglesia de Sant Pere.</p>
                 </div>
