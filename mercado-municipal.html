@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercado Municipal - Connecta Patrimonio Sueca</title>
+    <meta name="description" content="Información accesible sobre el Mercado Municipal de Sueca. Fácil de leer y navegar.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="accessibility.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <a href="index.html" class="navbar-brand" aria-label="Ir a página principal de Connecta Patrimonio">
+                Connecta Patrimonio
+            </a>
+            <a href="index.html" class="home-button" aria-label="Volver al inicio">
+                <span class="home-icon" aria-hidden="true">🏠</span>
+                Inicio
+            </a>
+        </nav>
+        
+        <header class="header" role="banner">
+            <h1>🏪 Mercado Municipal</h1>
+        </header>
+        
+        <div class="accessibility-options" role="region" aria-label="Opciones de accesibilidad">
+            <h2 class="options-title">Elige cómo quieres la información:</h2>
+            <div class="options-buttons">
+                <button class="option-button active" id="lectura-facil" aria-label="Activar modo de lectura fácil" aria-pressed="true">
+                    <span class="option-icon" aria-hidden="true">📖</span>
+                    Lectura Fácil
+                </button>
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">🎥</span>
+                    Video con Audiodescripción
+                </button>
+            </div>
+        </div>
+        
+        <main class="content-section" role="main">
+            <section class="description-section" aria-label="Descripción del lugar">
+                <h2 class="section-title">¿Qué es el Mercado Municipal?</h2>
+                <div class="easy-read-content">
+                    <p>El Mercado Municipal es donde la gente compra comida fresca.</p>
+                    <p>Tiene muchas tiendas pequeñas dentro.</p>
+                    <p>Venden pescado, carne, frutas y verduras.</p>
+                    <p>Es un lugar con mucha gente y ruido.</p>
+                    <p>Los vendedores son muy amables.</p>
+                    <p>Es importante para la vida diaria de Sueca.</p>
+                </div>
+            </section>
+            
+            <section class="media-section" aria-label="Video informativo">
+                <h2 class="section-title">Video sobre el Mercado</h2>
+                <div class="video-container">
+                    <video controls aria-label="Video sobre el Mercado Municipal con subtítulos">
+                        <source src="videos/mercado-municipal.mp4" type="video/mp4">
+                        <track kind="subtitles" src="subtitles/mercado-municipal-es.vtt" srclang="es" label="Español" default>
+                        <p>Tu navegador no soporta video. <a href="videos/mercado-municipal.mp4">Descargar video</a></p>
+                    </video>
+                    <p class="media-description">Este video muestra el ambiente del Mercado Municipal y sus productos. Tiene subtítulos en español.</p>
+                </div>
+            </section>
+            
+            <section class="audio-section" aria-label="Audio informativo">
+                <h2 class="section-title">Audio sobre el Mercado</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Mercado Municipal">
+                        <source src="audio/mercado-municipal.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audio/mercado-municipal.mp3">Descargar audio</a></p>
+                    </audio>
+                    <p class="media-description">Escucha sobre la tradición comercial del Mercado Municipal de Sueca.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="accessibility-info" role="contentinfo">
+            <h3 class="accessibility-title">Página accesible</h3>
+            <p class="accessibility-text">Esta página está diseñada para ser fácil de usar por todas las personas. Si necesitas ayuda, busca personal de información turística.</p>
+        </footer>
+    </div>
+</body>
+</html>

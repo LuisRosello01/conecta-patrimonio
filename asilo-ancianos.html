@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asilo de los Ancianos Desamparados - Connecta Patrimonio Sueca</title>
+    <meta name="description" content="Información accesible sobre el Asilo de los Ancianos Desamparados de Sueca. Fácil de leer y navegar.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="accessibility.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <a href="index.html" class="navbar-brand" aria-label="Ir a página principal de Connecta Patrimonio">
+                Connecta Patrimonio
+            </a>
+            <a href="index.html" class="home-button" aria-label="Volver al inicio">
+                <span class="home-icon" aria-hidden="true">🏠</span>
+                Inicio
+            </a>
+        </nav>
+        
+        <header class="header" role="banner">
+            <h1>🏥 Asilo de los Ancianos Desamparados</h1>
+        </header>
+        
+        <div class="accessibility-options" role="region" aria-label="Opciones de accesibilidad">
+            <h2 class="options-title">Elige cómo quieres la información:</h2>
+            <div class="options-buttons">
+                <button class="option-button active" id="lectura-facil" aria-label="Activar modo de lectura fácil" aria-pressed="true">
+                    <span class="option-icon" aria-hidden="true">📖</span>
+                    Lectura Fácil
+                </button>
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">🎥</span>
+                    Video con Audiodescripción
+                </button>
+            </div>
+        </div>
+        
+        <main class="content-section" role="main">
+            <section class="description-section" aria-label="Descripción del lugar">
+                <h2 class="section-title">¿Qué es el Asilo de los Ancianos Desamparados?</h2>
+                <div class="easy-read-content">
+                    <p>Este edificio se creó para ayudar a las personas mayores.</p>
+                    <p>Hace muchos años, algunas personas mayores no tenían familia.</p>
+                    <p>No tenían casa ni comida.</p>
+                    <p>La gente buena de Sueca decidió ayudarlos.</p>
+                    <p>Construyeron este lugar para cuidar a los mayores.</p>
+                    <p>Es un ejemplo de bondad y ayuda entre personas.</p>
+                </div>
+            </section>
+            
+            <section class="media-section" aria-label="Video informativo">
+                <h2 class="section-title">Video sobre el Asilo</h2>
+                <div class="video-container">
+                    <video controls aria-label="Video sobre el Asilo de los Ancianos Desamparados con subtítulos">
+                        <source src="videos/asilo-ancianos.mp4" type="video/mp4">
+                        <track kind="subtitles" src="subtitles/asilo-ancianos-es.vtt" srclang="es" label="Español" default>
+                        <p>Tu navegador no soporta video. <a href="videos/asilo-ancianos.mp4">Descargar video</a></p>
+                    </video>
+                    <p class="media-description">Este video muestra la historia social del Asilo de los Ancianos Desamparados. Tiene subtítulos en español.</p>
+                </div>
+            </section>
+            
+            <section class="audio-section" aria-label="Audio informativo">
+                <h2 class="section-title">Audio sobre el Asilo</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Asilo de los Ancianos Desamparados">
+                        <source src="audio/asilo-ancianos.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audio/asilo-ancianos.mp3">Descargar audio</a></p>
+                    </audio>
+                    <p class="media-description">Escucha sobre la labor social y la historia del Asilo de los Ancianos Desamparados.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="accessibility-info" role="contentinfo">
+            <h3 class="accessibility-title">Página accesible</h3>
+            <p class="accessibility-text">Esta página está diseñada para ser fácil de usar por todas las personas. Si necesitas ayuda, busca personal de información turística.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museo de Chocolate Comes - Connecta Patrimonio Sueca</title>
+    <meta name="description" content="Información accesible sobre el Museo de Chocolate Comes de Sueca. Fácil de leer y navegar.">
+    <link rel="stylesheet" href="styles.css">
+    <script src="accessibility.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <a href="index.html" class="navbar-brand" aria-label="Ir a página principal de Connecta Patrimonio">
+                Connecta Patrimonio
+            </a>
+            <a href="index.html" class="home-button" aria-label="Volver al inicio">
+                <span class="home-icon" aria-hidden="true">🏠</span>
+                Inicio
+            </a>
+        </nav>
+        
+        <header class="header" role="banner">
+            <h1>🍫 Museo de Chocolate Comes</h1>
+        </header>
+        
+        <div class="accessibility-options" role="region" aria-label="Opciones de accesibilidad">
+            <h2 class="options-title">Elige cómo quieres la información:</h2>
+            <div class="options-buttons">
+                <button class="option-button active" id="lectura-facil" aria-label="Activar modo de lectura fácil" aria-pressed="true">
+                    <span class="option-icon" aria-hidden="true">📖</span>
+                    Lectura Fácil
+                </button>
+                <button class="option-button" id="audiodescripcion" aria-label="Activar modo de video con audiodescripción" aria-pressed="false">
+                    <span class="option-icon" aria-hidden="true">🎥</span>
+                    Video con Audiodescripción
+                </button>
+            </div>
+        </div>
+        
+        <main class="content-section" role="main">
+            <section class="description-section" aria-label="Descripción del lugar">
+                <h2 class="section-title">¿Qué es el Museo de Chocolate?</h2>
+                <div class="easy-read-content">
+                    <p>El Museo de Chocolate Comes es un lugar muy dulce.</p>
+                    <p>Aquí se hace chocolate desde hace muchos años.</p>
+                    <p>Puedes ver cómo se fabrica el chocolate.</p>
+                    <p>Hay máquinas antiguas y herramientas especiales.</p>
+                    <p>También puedes probar chocolate rico.</p>
+                    <p>Es un museo que huele muy bien a chocolate.</p>
+                </div>
+            </section>
+            
+            <section class="media-section" aria-label="Video con audiodescripción">
+                <h2 class="section-title">Video con Audiodescripción</h2>
+                <div class="video-container">
+                    <video controls aria-label="Video sobre el Museo de Chocolate Comes con audiodescripción y subtítulos">
+                        <source src="videos/museo-chocolate.mp4" type="video/mp4">
+                        <track kind="subtitles" src="subtitles/museo-chocolate-es.vtt" srclang="es" label="Español" default>
+                        <track kind="descriptions" src="subtitles/museo-chocolate-audiodesc.vtt" srclang="es" label="Audiodescripción">
+                        <p>Tu navegador no soporta video. <a href="videos/museo-chocolate.mp4">Descargar video</a></p>
+                    </video>
+                    <p class="media-description">Este video muestra cómo se hace el chocolate en el museo. Incluye audiodescripción para personas con discapacidad visual y subtítulos en español.</p>
+                </div>
+            </section>
+            
+            <section class="audio-section" aria-label="Audio informativo">
+                <h2 class="section-title">Audio sobre el Chocolate</h2>
+                <div class="audio-container">
+                    <audio controls aria-label="Audio sobre el Museo de Chocolate Comes">
+                        <source src="audio/museo-chocolate.mp3" type="audio/mpeg">
+                        <p>Tu navegador no soporta audio. <a href="audio/museo-chocolate.mp3">Descargar audio</a></p>
+                    </audio>
+                    <p class="media-description">Escucha sobre la historia del chocolate en Sueca y la familia Comes.</p>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="accessibility-info" role="contentinfo">
+            <h3 class="accessibility-title">Página accesible</h3>
+            <p class="accessibility-text">Esta página está diseñada para ser fácil de usar por todas las personas. Si necesitas ayuda, busca personal de información turística.</p>
+        </footer>
+    </div>
+</body>
+</html>
