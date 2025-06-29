@@ -9,26 +9,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Función para mostrar solo lectura fácil
-    function showLecturaFacil() {
+    function showLecturaFacil(shouldScroll = false) {
         // Activar botón y desactivar el otro
         lecturaFacilBtn.classList.add('active');
         audiodescripcionBtn.classList.remove('active');
         lecturaFacilBtn.setAttribute('aria-pressed', 'true');
         audiodescripcionBtn.setAttribute('aria-pressed', 'false');
         
-        // Mostrar sección de descripción de texto
-        const descriptionSection = document.querySelector('.description-section');
-        if (descriptionSection) {
-            descriptionSection.style.display = 'block';
-            descriptionSection.setAttribute('aria-hidden', 'false');
-        }
-        
-        // Ocultar secciones multimedia
+        // Ocultar secciones multimedia primero
         const mediaSections = document.querySelectorAll('.media-section, .audio-section');
         mediaSections.forEach(section => {
             section.style.display = 'none';
             section.setAttribute('aria-hidden', 'true');
         });
+        
+        // Mostrar sección de descripción de texto con un pequeño delay
+        setTimeout(() => {
+            const descriptionSection = document.querySelector('.description-section');
+            if (descriptionSection) {
+                descriptionSection.style.display = 'block';
+                descriptionSection.setAttribute('aria-hidden', 'false');
+            }
+            
+            // Scroll suave al contenido principal solo si se solicita
+            if (shouldScroll) {
+                scrollToContent();
+            }
+        }, 100);
         
         // Anunciar el cambio para lectores de pantalla
         announceChange('Mostrando contenido en lectura fácil');
@@ -42,39 +49,54 @@ document.addEventListener('DOMContentLoaded', function() {
         audiodescripcionBtn.setAttribute('aria-pressed', 'true');
         lecturaFacilBtn.setAttribute('aria-pressed', 'false');
         
-        // Ocultar sección de descripción de texto
+        // Ocultar sección de descripción de texto y audio adicional
         const descriptionSection = document.querySelector('.description-section');
+        const audioSection = document.querySelector('.audio-section');
+        
         if (descriptionSection) {
             descriptionSection.style.display = 'none';
             descriptionSection.setAttribute('aria-hidden', 'true');
         }
         
-        // Mostrar solo la sección de video (primera sección multimedia)
-        const videoSection = document.querySelector('.media-section');
-        const audioSection = document.querySelector('.audio-section');
-        
-        if (videoSection) {
-            videoSection.style.display = 'block';
-            videoSection.setAttribute('aria-hidden', 'false');
-        }
-        
-        // Ocultar sección de audio si existe
         if (audioSection) {
             audioSection.style.display = 'none';
             audioSection.setAttribute('aria-hidden', 'true');
         }
         
-        // Enfocar al video
-        const videoElement = document.querySelector('.media-section video');
-        if (videoElement) {
-            // Dar un momento para que se muestre antes de enfocar
-            setTimeout(() => {
-                videoElement.focus();
-            }, 100);
-        }
+        // Mostrar solo la sección de video con un pequeño delay
+        setTimeout(() => {
+            const videoSection = document.querySelector('.media-section');
+            if (videoSection) {
+                videoSection.style.display = 'block';
+                videoSection.setAttribute('aria-hidden', 'false');
+            }
+            
+            // Scroll suave al contenido principal
+            scrollToContent();
+            
+            // Enfocar al video después del scroll
+            const videoElement = document.querySelector('.media-section audio');
+            if (videoElement) {
+                setTimeout(() => {
+                    videoElement.focus();
+                }, 600); // Tiempo para completar scroll y animación
+            }
+        }, 100);
         
         // Anunciar el cambio para lectores de pantalla
-        announceChange('Mostrando video con audiodescripción');
+        announceChange('Mostrando audiodescripción');
+    }
+    
+    // Función para hacer scroll suave al contenido principal
+    function scrollToContent() {
+        const contentSection = document.querySelector('.content-section');
+        if (contentSection) {
+            contentSection.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+                inline: 'nearest'
+            });
+        }
     }
     
     // Función para anunciar cambios a lectores de pantalla
@@ -100,14 +122,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Event listeners
-    lecturaFacilBtn.addEventListener('click', showLecturaFacil);
+    lecturaFacilBtn.addEventListener('click', () => showLecturaFacil(true));
     audiodescripcionBtn.addEventListener('click', showAudiodescripcion);
     
     // Manejar teclas para accesibilidad del teclado
     lecturaFacilBtn.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            showLecturaFacil();
+            showLecturaFacil(true);
         }
     });
     
@@ -118,6 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Inicializar en modo lectura fácil
-    showLecturaFacil();
+    // Inicializar en modo lectura fácil sin scroll
+    showLecturaFacil(false);
 });

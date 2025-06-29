@@ -1,3 +1,8 @@
+/* Scroll suave para toda la página */
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -164,7 +169,7 @@ h1 {
 
 .card-number {
     position: absolute;
-    left: 15px;
+    left: 35px;
     font-size: 2.2rem;
     font-weight: bold;
     color: #ffffff;
@@ -335,6 +340,26 @@ footer a:hover, footer a:focus {
     padding: 25px;
     margin-bottom: 25px;
     transition: all 0.3s ease;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación suave para cuando aparece el contenido */
+.description-section[style*="block"], 
+.media-section[style*="block"], 
+.audio-section[style*="block"] {
+    animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .description-section {
